@@ -53,6 +53,11 @@ figure {
     color: gray;
 }
 
+.video iframe{
+    margin-top: 20px;
+    width: 100%;
+}
+
 .paragrafo2 {
     margin-top: 50px;
     border-left: solid 1px;
