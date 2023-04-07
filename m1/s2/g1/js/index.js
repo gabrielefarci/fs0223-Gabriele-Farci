@@ -10,7 +10,8 @@ function verifica() {
     var anni = document.getElementById('eta').value;
 
     if(anni >= 18) {
-        document.getElementById('box2').innerHTML = 'Sei maggiorenne';
+        
+
     }else {
         document.getElementById('box2').innerHTML = 'Sei minorenne. Tra 5 secondi verrai reindirizzato a una pagina più adatta';
         setTimeout(function() {
