@@ -13,7 +13,10 @@ REGOLE
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 
-let sum = 10 + 20;
+let num1 = 10;
+let num2 = 20;
+let risultato = num1 + num2;
+let sum = risultato;
 console.log(sum);
 
 /* ESERCIZIO B
@@ -229,19 +232,16 @@ console.log(deleteProp({type: 'corso', name: 'full stack developer', school: 'ep
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
-/*
-function newestMovie() {
-  let olderMovies = null;
 
-  for(let currentMovie of movies) {
-    if(olderMovies == null || olderMovies.Year < currentMovie.Year){
-      olderMovies = currentMovie;
-    }
-  }
-  return olderMovies;
+function newestMovie(movies) {
+  let i = 0;
+  let olderMovie = movies.reduce(function (accumulator, currentValue){
+    return accumulator < currentValue.n
+  },i)
+  console.log(olderMovie);
 }
 
-console.log(newestMovie());
+newestMovie();
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
