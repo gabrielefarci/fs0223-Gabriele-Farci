@@ -71,7 +71,6 @@ a {
         justify-content: center;
         width: 300px;
         height: 250px;
-        position: relative;
     }
 
     ul {
@@ -85,39 +84,32 @@ a {
         width: 100px;
         text-align: center;
     }
-    
-    .ourHoney {
-        position: absolute;
-        bottom: 80px;
-        left: 20px;
+
+    .ourHoney:nth-of-type(1) {
+        order: 2;
     }
 
-    .traceHoney {
-        position: absolute;
-        bottom: 80px;
-        right: 20px;
+    .traceHoney:nth-of-type(2) {
+        order: 3;
     }
 
-    .facilities {
-        position: absolute;
-        bottom: 30px;
-        left: 20px;
+    .shop:nth-of-type(3) {
+        order: 1;
     }
 
-    .contacts {
-        position: absolute;
-        bottom: 30px;
-        right: 20px;
+    .facilities:nth-of-type(4) {
+        order: 4;
+    }
+
+    .contacts:nth-of-type(5) {
+        order: 5;
     }
 
     .shop {
-        position: absolute;
-        top: 15px;
-        display: flex;
-        justify-content: space-evenly;
-        width: 230px;
+        width: 220px;
+        height: 50px;
     }
-
+    
     h1 {
         text-align: center;
         font-weight: bold;
