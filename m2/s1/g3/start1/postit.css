@@ -23,6 +23,7 @@ html, body {
     box-shadow: 3px 3px 5px 0 black;
     position: relative;
     transition: all 500ms;
+    cursor: default;
 }
 
 .container div:hover {
@@ -41,6 +42,7 @@ html, body {
     padding: 20px;
     transform: rotate(-3deg);
     position: relative;
+    animation: postitAnimation 1s linear backwards;
 }
 
 .task2 {
@@ -54,6 +56,7 @@ html, body {
     padding: 20px;
     transform: rotate(3deg);
     translate: 0 3px;
+    animation: postitAnimation 1s linear 1s backwards;
 }
 
 .task3 {
@@ -67,6 +70,7 @@ html, body {
     padding: 20px;
     transform: rotate(-7deg);
     translate: -10px -6px;
+    animation: postitAnimation 1s linear 2s backwards;
 }
 
 .task4 {
@@ -80,6 +84,7 @@ html, body {
     padding: 20px;
     transform: rotate(8deg);
     translate: -15px -3px;
+    animation: postitAnimation 1s linear 3s backwards;
 }
 
 .task5 {
@@ -92,6 +97,7 @@ html, body {
     align-items: center;
     padding: 20px;
     transform: rotate(-3deg);
+    animation: postitAnimation 1s linear 4s backwards;
 }
 
 .task6 {
@@ -105,6 +111,7 @@ html, body {
     padding: 20px;
     transform: rotate(-10deg);
     translate: -3px -10px;
+    animation: postitAnimation 1s linear 5s backwards;
 }
 
 .task7 {
@@ -118,6 +125,7 @@ html, body {
     padding: 20px;
     transform: rotate(-4deg);
     translate: -3px -10px;
+    animation: postitAnimation 1s linear 6s backwards;
 }
 
 .task8 {
@@ -131,9 +139,21 @@ html, body {
     padding: 20px;
     transform: rotate(4deg);
     translate: -15px -8px;
+    animation: postitAnimation 1s linear 7s backwards;
 }
 
 h2 {
     font-weight: bold;
     font-size: 30px;
+}
+
+@keyframes postitAnimation {
+    0% {
+        scale: 3;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
