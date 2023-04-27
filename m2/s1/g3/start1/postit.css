@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+html, body {
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+.container {
+    background-color: #666666;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    width: 1000px;
+}
+
+.container div {
+    margin: 20px;
+    box-shadow: 3px 3px 5px 0 black;
+    position: relative;
+    transition: all 500ms;
+}
+
+.container div:hover {
+    z-index: 1;
+    transform: scale(1.3);
+}
+
+.task1 {
+    background-color: #dbdbad;
+    width: 150px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform: rotate(-3deg);
+    position: relative;
+}
+
+.task2 {
+    background-color: #b3d4b5;
+    width: 150px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform: rotate(3deg);
+    translate: 0 3px;
+}
+
+.task3 {
+    background-color: #aaaac4;
+    width: 150px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform: rotate(-7deg);
+    translate: -10px -6px;
+}
+
+.task4 {
+    background-color: #b3d4b5;
+    width: 150px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform: rotate(8deg);
+    translate: -15px -3px;
+}
+
+.task5 {
+    background-color: #dbdbad;
+    width: 150px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform: rotate(-3deg);
+}
+
+.task6 {
+    background-color: #aaaac4;
+    width: 150px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform: rotate(-10deg);
+    translate: -3px -10px;
+}
+
+.task7 {
+    background-color: #dbdbad;
+    width: 150px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform: rotate(-4deg);
+    translate: -3px -10px;
+}
+
+.task8 {
+    background-color: #b3d4b5;
+    width: 150px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform: rotate(4deg);
+    translate: -15px -8px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 30px;
+}
