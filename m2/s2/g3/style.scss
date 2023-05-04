@@ -1,0 +1,69 @@
+@import './partials/reset';
+@import './partials/colors';
+@import './partials/font';
+@import './partials/spacings';
+@import './partials/buttons';
+@import './partials/mixins';
+@import './partials/animations';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    ul{
+        display: flex;
+        li {
+            padding-right: 30px;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+    .button1 {
+        background-color: $button1-bg-color;
+    }
+    .button2 {
+        background-color: $button2-bg-color;
+    }
+    .button3 {
+        background-color: $button3-bg-color;
+    }
+    button {
+        cursor: pointer;
+        border: none;
+        padding: 10px;
+        border-radius: 5px
+    } 
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    background-color: $bg-hero-color;
+    padding: 30px 50px;
+    h1 {
+        @include title-big($big-text);
+        @include animation(fadein);
+    }
+    p {
+        font-size: $normal-text;
+        @include animation(fadein);
+    }
+    .image {
+        @include floating;
+        @include animation(fadein);
+    } 
+}
+
+.grid {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        @include floating;
+    }
+}

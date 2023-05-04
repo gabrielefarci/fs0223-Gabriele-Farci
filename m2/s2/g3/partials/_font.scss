@@ -1,0 +1,13 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+$big-text: 70px;
+$medium-text: 40px;
+$normal-text: 20px;
+$small-text: 14px;
+
+@mixin title-big($big-text) {
+    font-size: $big-text;
+    font-weight: bold;
+}
