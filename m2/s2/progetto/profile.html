@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" type="image/jpg" href="Netflix-assets/assets/favicon.ico">
+    <title>Profile - Netflix</title>
+</head>
+<body>
+    <img src="Netflix-assets/assets/netflix_logo.png" width="200" alt="Netflix Logo">
+    <div class="main-content">
+        <h1 class="big-text">Edit Profile</h1>
+
+        <div class="profile-settings">
+            <img src="Netflix-assets/assets/avatar.png" width="150" height="150" alt="Avatar">
+            <a href="#"><i class="fas fa-pen" id="change-avatar"></i></a>
+
+            <div class="settings">
+                <div class="profile">
+                    <input type="text" name="name-surname" id="name" value="Gabriele Farci">
+
+                    <h4>Language:</h4>
+                    <button id="btn-languages">English <i class="fas fa-caret-down"></i></button>
+                    <ul id="list-languages">
+                        <li class="small-text"><a href="#">Italiano</a></li>
+                    </ul>
+                </div>
+                <div class="maturity">
+                    <h4>Maturity Settings:</h4>
+                    <span>ALL MATURITY RATINGS</span>
+                    <p>Show titles of all maturity ratings for this profile</p>
+                    <button>EDIT</button>
+                </div>
+                <div class="autoplay-controls">
+                    <h4>Autoplay controls:</h4>
+                    <div>
+                        <input type="checkbox" id="check1"><label for="check1">Autoplay next episode in a series on all devices.</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="check2"><label for="check2">Autoplay previews while browsing on all devices.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button>SAVE</button>
+            <button>CANCEL</button>
+            <button>DELETE PROFILE</button>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/091ef910ad.js" crossorigin="anonymous"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
