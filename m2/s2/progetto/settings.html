@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style3.css">
     <link rel="shortcut icon" type="image/jpg" href="Netflix-assets/assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <title>Settings - Netflix</title>
 </head>
 <body>
     <nav>
         <div class="nav-left">
-            <img src="Netflix-assets/assets/netflix_logo.png" width="200" alt="Netflix Logo">
+            <a href="index.html"><img src="Netflix-assets/assets/netflix_logo.png" alt="Netflix Logo"></a>
 
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">TV Shows</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">TV Shows</a></li>
                 <li><a href="#">Movies</a></li>
                 <li><a href="#">Recently Added</a></li>
                 <li><a href="#">My List</a></li>
@@ -30,75 +31,112 @@
                 <li><a href="#">KIDS</a></li>
             </ul>
 
-            <i class="fas fa-bell"></i>
-
-            <a href="profile.html" target="_blank"><img src="Netflix-assets/assets/avatar.png" width="20" height="20" alt="Avatar"></a>
-            <i class="fas fa-caret-down" class="arrow-down"></i>
+            <a href="profile.html" target="_blank"><img src="Netflix-assets/assets/avatar.png" alt="Avatar"></a>
+            <i class="fas fa-caret-down" id="arrow-down"></i>
         </div>
     </nav>
 
     <div class="hero-content">
-        <h1 class="medium-text">Account</h1>
-
-        <div class="main-content">
-            <div class="membership">
-                <h2>MEMBERSHIP & BILLING</h2>
-                <button>Cancel Membership</button>
-            </div>
-
-            <div class="account">
-                <div class="info-account">
-                    <div>
-                        <p>email</p>
-                        <p>password</p>
-                        <p>phone</p>
-                    </div>
-                    <div>
-                        <a href="#">Change account email</a>
-                        <a href="#">Change password</a>
-                        <a href="#">Change phone number</a>
-                    </div>
-                </div>
-                <div class="payments">
-                    <div>
-                        <p>paypal</p>
-                    </div>
-                    <div>
-                        <a href="#">Update payment info</a>
-                        <a href="#">Billing details</a>
-                    </div>
-                </div>
-                <div class="gift-cards">
-                    <a href="#">Redeem gift card or promo code</a>
-                    <a href="#">Where to buy gift cards</a>
+        <div class="container">
+            <div class="row">
+                <div class="col p-0">
+                    <h1 class="medium-text">Account</h1>
                 </div>
             </div>
-        </div>
-
-        <div class="plan-details">
-            <h2>PLAN DETAILS</h2>
-            <p>premium ultra hd</p>
-            <a href="#">change plan</a>
-        </div>
-
-        <div class="settings">
-            <h2>SETTINGS</h2>
-
-            <div>
-                <a href="#">Parental controls</a>
-                <a href="#">Test partecipation</a>
-                <a href="#">Manage download device</a>
-                <a href="#">Activate a device</a>
-                <a href="#">Recent device streaming activity</a>
-                <a href="#">Sign out of all devices</a>
+            <div class="row border-bottom border-top p-0 pt-2">
+                <div class="col-4 p-0">
+                    <h2 class="fs-5">MEMBERSHIP & BILLING</h2>
+                    <button>Cancel Membership</button>
+                </div>
+                <div class="col-4 p-0 border-bottom pt-2 pb-2">
+                    <a href="mailto:farci.gabriele2002@gmail.com" class="mb-0 pb-1 text-black">farci.gabriele2002@gmail.com</a>
+                    <p class="mb-0 pb-1">Password: *******</p>
+                    <p class="mb-0">Phone: 3314984426</p>
+                </div>
+                <div class="col-4 p-0 border-bottom pt-2 pb-2 d-flex flex-column align-items-end">
+                    <a href="#">Change account email</a>
+                    <a href="#">Change password</a>
+                    <a href="#">Change phone number</a>
+                </div>
+                <div class="container">
+                    <div class="row p-0">
+                        <div class="col-4"></div>
+                        <div class="col-4 border-bottom pt-2 pb-2 px-0">
+                            <p class="text-black"><i class="fab fa-paypal"></i><span class="fw-bold fst-italic"> PayPal </span>admin@gmail.com</p>
+                        </div>
+                        <div class="col-4 border-bottom pt-2 pb-2 d-flex flex-column align-items-end px-0">
+                            <a href="#">Update payment info</a>
+                            <a href="#">Billing details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row p-0">
+                        <div class="col-4"></div>
+                        <div class="col-4"></div>
+                        <div class="col-4 pt-2 pb-2 d-flex flex-column align-items-end px-0">
+                            <a href="#">Redeem gift card or promo code</a>
+                            <a href="#">Where to buy gift cards</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="profile">
-            <h2>MY PROFILE</h2>
+            
+            <div class="row border-bottom d-flex align-items-center">
+                <div class="col-4 p-0 pt-2 pb-2">
+                    <h2 class="fs-5 mb-0">PLAN DETAILS</h2>
+                </div>
+                <div class="col-4 p-0 pt-2 pb-2">
+                    <p class="mb-0 text-black">Premium <span class="border border-2 border-black p-1">ULTRA HD</span></p>
+                </div>
+                <div class="col-4 p-0 pt-2 pb-2 d-flex flex-column align-items-end">
+                    <a href="#">Change Plan</a>
+                </div>
+            </div>
+            <div class="row border-bottom">
+                <div class="col-4 p-0 pt-2 pb-2">
+                    <h2 class="fs-5">SETTINGS</h2>
+                </div>
+                <div class="col-4 p-0 pt-2 pb-2">
+                    <a href="#">Parental controls</a>
+                    <a href="#">Test participation</a>
+                    <a href="#">Manage download device</a>
+                    <a href="#">Activate a device</a>
+                    <a href="#">Recent device streaming activity</a>
+                    <a href="#">Sign out of all devices</a>
+                </div>
+                <div class="col-4 p-0"></div>
+            </div>
+            <div class="row d-flex align-items-start">
+                <div class="col-4 p-0 pt-2">
+                    <h2 class="mb-0 fs-5">MY PROFILE</h2>
+                </div>
+                <div class="col-4 d-flex align-items-center p-0 pt-2 pb-2">
+                    <img src="Netflix-assets/assets/avatar.png" width="25" height="25" alt="Avatar">
+                    <h3 class="fs-6 mb-0 mx-1">Gabriele Farci</h3>
+                </div>
+                <div class="col-4 p-0 pt-2 pb-2 d-flex flex-column align-items-end">
+                    <a href="profile.html" target="_blank">Manage Profiles</a>
+                    <a href="#">Add profile email</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 p-0"></div>
+                <div class="col-2 p-0">
+                    <a href="#">Language</a>
+                    <a href="#">Playback settings</a>
+                    <a href="#">Subtitle apparance</a>
+                </div>
+                <div class="col-2 p-0">
+                    <a href="#">Viewing activity</a>
+                    <a href="#">Ratings</a>
+                </div>
+                <div class="col-3 p-0"></div>
+            </div>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/091ef910ad.js" crossorigin="anonymous"></script>
 </body>
 </html>

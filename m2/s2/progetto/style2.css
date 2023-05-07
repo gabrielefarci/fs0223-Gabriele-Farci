@@ -26,8 +26,10 @@ p {color: rgb(166, 162, 162);}
     border-bottom: 1px solid rgba(166, 162, 162, 0.408);
 }
 
-.profile-settings img {
+.profile-settings div:first-child {
     position: relative;
+    width: 150px;
+    height: 150px;
 }
 
 #change-avatar {
@@ -37,8 +39,8 @@ p {color: rgb(166, 162, 162);}
     color: #fff;
     padding: 5px;
     position: absolute;
-    top: 430px;
-    left: 688px;
+    bottom: 5px;
+    left: 5px;
     font-size: 13px;
 }
 
@@ -165,5 +167,8 @@ button {
 
 .buttons button:first-child {
     background-color: #fff;
+}
+
+.buttons button a{
     color: #000;
 }

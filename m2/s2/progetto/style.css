@@ -13,6 +13,18 @@ p {color: rgb(166, 162, 162);}
 .normal-text {font-size: 20px;}
 .small-text {font-size: 14px;}
 
+* {
+    box-sizing: border-box;
+}
+
+/* main content */
+
+@media screen and (max-width: 885px) {
+    .main-content {
+        overflow: hidden;
+    }
+}
+
 /* nav */
 
 nav {
@@ -20,8 +32,8 @@ nav {
     justify-content: space-between;
 }
 
-nav img {
-    padding: 0 20px;
+.logo-netflix {
+    width: 200px;
 }
 
 .nav-left, .nav-right {
@@ -38,7 +50,11 @@ nav img {
 }
 
 .nav-right {
-    padding: 0 20px;
+    padding: 0 40px;
+}
+
+.menu-mobile {
+    display: none;
 }
 
 nav i {
@@ -51,21 +67,127 @@ nav i {
     padding-right: 20px;
 }
 
-.arrow-down {
-    padding: 0;
+#input-search {
+    background-color: #000;
+    border: 1px solid #fff;
+    padding: 8px;
+    width: 200px;
+    margin-right: 10px;
+    outline: none;
+    color: white;
+    z-index: -10;
+    animation-name: searchArea;
+    animation-duration: 200ms;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes searchArea {
+    0% {
+        transform: translateX(50px);
+        z-index: -10;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 1;
+    }
+}
+
+#avatar-image {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+#arrow-down {
+    padding: 5px;
+}
+
+.drop-menu {
+    position: relative;
+}
+
+.avatar-menu {
+    display: none;
+    background-color: #000;
+    padding: 10px 30px 10px 10px;
+}
+
+.drop-menu:hover .avatar-menu{
+    display: block;
+    position: absolute;
+    right: -30px;
+}
+
+.avatar-menu li {
+    padding: 5px 10px 5px 0;
+}
+
+.avatar-menu a {
+    color: #fff;
+}
+
+@media screen and (max-width:885px) {
+    .nav-left ul {
+        display: none;
+    }
+    .menu-mobile {
+        display: block;
+        position: relative;
+    }
+    .menu-mobile:hover #sub-menu {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        text-align: center;
+        width: 200px;
+        z-index: 100;
+    }
+    #sub-menu li {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    #search {
+        display: none;
+    }
+    .kids {
+        display: none;
+    }
+    .logo-netflix {
+        width: 100px;
+    }
+    .menu-mobile {
+        font-size: 14px;
+    }
+    .nav-right {
+        padding-right: 10px;
+    }
+    #arrow-down {
+        display: none;
+    }
 }
 
 /* hero content */
 
 .hero-content {
     margin-top: 30px;
-    padding: 0 40px;
+    padding: 20px 40px;
     position: sticky;
-    top: 50px;
+    top: 0;
     z-index: 10;
 }
 
-.hero-content, .hero-content div{
+.active {
+    background-color: #141414;
+}
+
+.hero-content, .hero-content div:first-child{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,39 +197,49 @@ nav i {
     color: #fff;
 }
 
-.hero-content button {
-    background: none;
+#btn-genres {
+    width: 80px;
+    background: #000;
+    color: white;
     border: 1px solid #fff;
-    color: #fff;
-    padding: 5px;
-    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
     cursor: pointer;
+    margin-left: 10px;
+}
+
+.hero-content div:nth-child(2) {
     position: relative;
 }
 
-.sub-menu {
-    display: none;
-}
-
 .genres {
-    display: flex;
-    background-color: #000;
-    padding: 5px;
+    width: 670px;
     position: absolute;
-    top: 150px;
-    left: 250px;
+    top: 27px;
+    left: 0;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #000;
 }
 
 .genres div {
     display: flex;
     flex-direction: column;
+}
+
+.genres div:first-child {
     align-items: flex-start;
-    padding-right: 10px;
 }
 
 .genres li {
     padding: 5px;
     font-size: 14px;
+}
+
+.genres a:hover {
+    text-decoration: underline;
 }
 
 .icons i{
@@ -119,149 +251,144 @@ nav i {
     border: 1px solid white;
 }
 
+@media screen and (max-width: 900px) {
+    .medium-text {
+        font-size: 15px;
+    }
+    .hero-content {
+        padding: 20px 5px;
+    }
+    .genres {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+    .genres div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .medium-text {
+        font-size: 15px;
+    }
+    .hero-content {
+        padding: 20px 5px;
+    }
+    .genres {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+    .genres div {
+        width: 100%;
+    }
+}
+
 /* trending now */
 
 h3 {
-    padding: 40px 40px;
+    padding: 40px 0 5px 10px;
 }
 
-#slider-1, #slider-2, #slider-3 {
+#swiper-1, #swiper-2, #swiper-3 {
     position: relative;
-    z-index: 0;
 }
 
 .swiper-slide img {
     width: 300px;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    z-index: 0;
+    object-fit: cover;
+    margin: 30px auto;
+    position: relative;
 }
 
 .swiper-slide img:hover {
     transform: scale(1.3);
-    transition: all 500ms linear;
+    transition: all 500ms ease-out 1s;
     transition-delay: 200ms;
+    border-radius: 5px;
+    z-index: 30;
 }
 
-#slider-1 i, #slider-2 i, #slider-3 {
+#slider-1 i, #slider-2 i, #slider-3 i {
     font-size: 40px;
     cursor: pointer;
+    color: #fff;
     z-index: 1;
-}
-
-.bg-next {
-    background-color: #000;
-    width: 30px;
-    height: 170px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    opacity: .4;
 }
 
 #next {
-    position: relative;
-    top: 65px;
-    right: 0;
-}
-
-.bg-prev {
-    background-color: #000;
-    width: 30px;
-    height: 170px;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: .4;
-    border-radius: 10px 0 0 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
 }
 
 #prev {
-    position: relative;
-    top: 65px;
-    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
 }
 
 /* watch again */
 
-.bg-next2 {
-    background-color: #000;
-    width: 30px;
-    height: 170px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    opacity: .4;
-}
-
 #next2 {
-    position: relative;
-    top: 65px;
-    right: 0;
-}
-
-.bg-prev2 {
-    background-color: #000;
-    width: 30px;
-    height: 170px;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: .4;
-    border-radius: 10px 0 0 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
 }
 
 #prev2 {
-    position: relative;
-    top: 65px;
-    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
 }
 
 /* new releases */
 
-.bg-next3 {
-    background-color: #000;
-    width: 30px;
-    height: 170px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    opacity: .4;
-}
-
 #next3 {
-    position: relative;
-    top: 65px;
-    right: 0;
-}
-
-.bg-prev3 {
-    background-color: #000;
-    width: 30px;
-    height: 170px;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: .4;
-    border-radius: 10px 0 0 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
 }
 
 #prev3 {
-    position: relative;
-    top: 65px;
-    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+/* media queries swiper */
+
+@media screen and (max-width: 1430px) {
+    .swiper-slide img {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .swiper-slide img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .swiper-slide img {
+        width: 150px;
+    }
 }
 
 /* footer */
 
 footer {
-    padding: 150px 500px 10px 500px;
+    padding: 50px 300px;
 }
 
 .socials {
@@ -313,4 +440,20 @@ footer {
 
 footer p {
     margin-top: 30px;
+}
+
+@media screen and (max-width: 885px) {
+    footer {
+        padding: 10px 50px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    footer {
+        padding: 5px;
+    }
+
+    .links div {
+        padding-right: 10px;
+    }
 }

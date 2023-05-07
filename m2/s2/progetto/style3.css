@@ -2,9 +2,7 @@
 
 /* base style */
 
-body {font-family: 'Roboto', sans-serif; background-color: #fff; height: 100vh;}
-
-a {text-decoration: none; color: rgb(166, 162, 162);}
+body {font-family: 'Roboto', sans-serif; background-color: #fff;}
 
 p {color: rgb(166, 162, 162);}
 
@@ -18,11 +16,13 @@ p {color: rgb(166, 162, 162);}
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #000;
 }
 
-nav img {
+.nav-left img {
     padding: 0 20px;
+    width: 200px;
 }
 
 .nav-left, .nav-right {
@@ -32,6 +32,7 @@ nav img {
 
 .nav-left ul {
     display: flex;
+    margin: 0;
 }
 
 .nav-left ul li {
@@ -42,39 +43,65 @@ nav img {
     padding: 0 20px;
 }
 
-nav i {
-    color: #fff;
-    padding-left: 20px;
-    cursor: pointer;
+.nav-right ul {
+    margin: 0;
+    padding: 0 10px;
 }
 
-#search {
-    padding-right: 20px;
+.nav-right img {
+    width: 35px;
+    height: 35px;
+}
+
+nav i {
+    color: #fff;
+    padding-left: 5px;
+    cursor: pointer;
 }
 
 .arrow-down {
     padding: 0;
 }
 
+nav a {
+    color: gray;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    .nav-left ul, .nav-right ul {
+        display: none;
+    }
+    .nav-right i {
+        display: none;
+    }
+    .nav-right {
+        padding: 5px;
+    }
+    .nav-left img {
+        padding: 5px;
+        width: 150px;
+    }
+    .nav-right img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 /* hero content */
 
 .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: 0 auto;
-    width: 600px;
-    height: 100%;
+    padding: 80px;
 }
 
 .hero-content h2 {
     color: gray;
 }
 
-.hero-content a {
+.container a {
     display: flex;
-    flex-direction: column;
-    color: #4896de;
+    text-decoration: none;
     padding-bottom: 5px;
 }
 
@@ -82,96 +109,22 @@ nav i {
     padding-bottom: 0;
 }
 
-/* main content */
-
-.main-content {
-    display: flex;
-    border-top: 1px solid rgba(166, 162, 162, 0.408);
-    border-bottom: 1px solid rgba(166, 162, 162, 0.408);
-    padding: 10px 0;
-}
-
-.membership {
-    width: 290px;
-}
-
-.membership button {
+.container button {
     border: none;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.312);
-    padding: 5px 30px;
-    cursor: pointer;
-    margin-top: 10px;
+    border-bottom: 1px solid rgba(162, 162, 162, 0.476);
+    padding: 5px 40px;
+    font-size: 14px;
 }
 
-/* account */
-
-.account {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: 50px;
+.container i {
+    color: #000;
 }
 
-.info-account {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(166, 162, 162, 0.408);
-    padding-bottom: 10px;
-}
-
-.account div:last-child {
-    text-align: right;
-}
-
-.account p {
-    padding-bottom: 5px;
-}
-
-.account p:last-child {
-    padding-bottom: 0;
-}
-
-/* payments */
-
-.payments {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(166, 162, 162, 0.408);
-}
-
-/* gift cards */
-
-.gift-cards {
-    padding: 10px 0;
-}
-
-/* plan details */
-
-.plan-details {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(166, 162, 162, 0.408);
-}
-
-/* settings */
-
-.settings {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(166, 162, 162, 0.408);
-}
-
-.settings div {
-    display: flex;
-    flex-direction: column;
-}
-
-/* profile */
-
-.profile {
-    padding: 10px 0;
+@media screen and (max-width: 500px) {
+    .hero-content {
+        padding: 10px 15px;
+    }
+    .medium-text {
+        font-size: 30px;
+    }
 }
