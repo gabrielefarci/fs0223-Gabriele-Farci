@@ -7,8 +7,6 @@ fetch('https://striveschool-api.herokuapp.com/books')
     }
 })
 .then((data) => {
-    console.log(data);
-
     let bookList = document.querySelector('.row')
 
     data.forEach((books) => {
@@ -38,6 +36,27 @@ fetch('https://striveschool-api.herokuapp.com/books')
         price.classList.add('card-text');
         price.innerText = books.price;
         cardBody.appendChild(price);
+
+        let btnBuy = document.createElement("input");
+        btnBuy.type = "button";
+        btnBuy.name = "add";
+        btnBuy.value = "Buy";
+        btnBuy.className = "btn btn-primary mx-3";
+        cardBody.appendChild(btnBuy);
+
+        let btnDiscard = document.createElement("input");
+        btnDiscard.type = "button";
+        btnDiscard.name = "add";
+        btnDiscard.value = "Discard";
+        btnDiscard.className = "btn btn-danger";
+        cardBody.appendChild(btnDiscard);
+
+        btnDiscard.addEventListener('click', discard);
+
+        function discard() {
+            col.remove();
+        }
+
     });
 })
 .catch((err) => {
