@@ -5,7 +5,7 @@ var Smartphone = /** @class */ (function () {
         this.costoMinuto = _costoMinuto;
     }
     Smartphone.prototype.ricarica = function (euro) {
-        return this.carica += euro;
+        this.carica += euro;
     };
     Smartphone.prototype.numero404 = function () {
         return this.carica + ' euro';
@@ -14,22 +14,36 @@ var Smartphone = /** @class */ (function () {
         return this.numeroChiamate;
     };
     Smartphone.prototype.chiamata = function (min) {
+        var minuti = min;
         this.carica - this.costoMinuto;
         this.numeroChiamate += 1;
+        // non sono riuscito a farlo
     };
     Smartphone.prototype.azzeraChiamate = function () {
         return this.numeroChiamate - this.numeroChiamate;
     };
     return Smartphone;
 }());
-var telefono = new Smartphone(5, 3, 0.20);
-var ricarica = telefono.ricarica(10);
-var mostraCredito = telefono.numero404();
-var numeroChiamate = telefono.getNumeroChiamate();
-var chiamataVirtuale = telefono.chiamata(2.15);
-var azzera = telefono.azzeraChiamate();
-console.log('Il credito residuo dopo la ricarica è di: ' + ricarica + ' euro');
-console.log('Il credito è di: ' + mostraCredito);
-console.log('Il numero di chiamate effettuate è: ' + numeroChiamate);
-console.log(chiamataVirtuale);
-console.log('Il numero di chiamate dopo l\'azzeramento è: ' + azzera);
+var firstUser = new Smartphone(5, 3, 0.20);
+var secondUser = new Smartphone(3, 5, 0.20);
+var thirdUser = new Smartphone(7, 2, 0.20);
+// primo utente
+firstUser.ricarica(10);
+firstUser.chiamata(2.15);
+console.log('Il credito del primo utente è di: ' + firstUser.numero404());
+console.log('Il numero di chiamate effettuate dal primo utente è: ' + firstUser.getNumeroChiamate());
+console.log('Il numero di chiamate del primo utente dopo l\'azzeramento è: ' + firstUser.azzeraChiamate());
+console.log('--------------------------------');
+// secondo utente
+secondUser.ricarica(15);
+secondUser.chiamata(1.73);
+console.log('Il credito del secondo utente è di: ' + secondUser.numero404());
+console.log('Il numero di chiamate effettuate dal secondo utente è: ' + secondUser.getNumeroChiamate());
+console.log('Il numero di chiamate del secondo utente dopo l\'azzeramento è: ' + secondUser.azzeraChiamate());
+console.log('--------------------------------');
+// terzo utente
+thirdUser.ricarica(20);
+thirdUser.chiamata(3.23);
+console.log('Il credito del terzo utente è di: ' + thirdUser.numero404());
+console.log('Il numero di chiamate effettuate dal terzo utente è: ' + thirdUser.getNumeroChiamate());
+console.log('Il numero di chiamate del terzo utente dopo l\'azzeramento è: ' + thirdUser.azzeraChiamate());
