@@ -1,0 +1,7 @@
+<div id="todo-list">
+  <p *ngIf="loading">Recupero Task...</p>
+  <p *ngIf="todos.length == 0 && !loading">Opps, non ci sono Task</p>
+  <ul *ngFor="let todo of todos">
+    <li>{{todo.title}}</li>
+  </ul>
+</div>

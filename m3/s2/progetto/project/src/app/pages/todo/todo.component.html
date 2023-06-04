@@ -1,0 +1,17 @@
+<div id="container">
+  <p *ngIf="loading">Recupero Task...</p>
+  <p *ngIf="todos.length == 0 && !loading">Opps, non ci sono Task</p>
+  <div id="todo-list">
+    <ul *ngFor="let todo of todos">
+      <li>{{todo.title}} <input type="checkbox" (click)="changeStatus(todo)"></li>
+    </ul>
+  </div>
+
+  <div id="form">
+    <input [(ngModel)]="todo.title" type="text">
+    <button (click)="create()"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+    </svg></button>
+  </div>
+</div>
+

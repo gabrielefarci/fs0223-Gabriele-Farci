@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+#check1:checked ~ label {
+  text-decoration: line-through;
+}
+
+#nav {
+  display: flex;
+  justify-content: center;
+}
+
+#nav a {
+  margin: 0 20px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
