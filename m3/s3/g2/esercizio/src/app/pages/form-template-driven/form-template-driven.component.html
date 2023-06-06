@@ -1,0 +1,57 @@
+<div class="container">
+  <form (ngSubmit)="submit(f)" #f="ngForm">
+    <h1>Form</h1>
+    <div class="row">
+      <div>
+        <input type="text" name="name" #name="ngModel" required ngModel>
+        <label for="">Name</label>
+        <div class="error">
+          <span *ngIf="name.invalid && name.touched">Enter a name</span>
+        </div>
+      </div>
+      <div>
+        <input type="text" name="alter-ego" #alterego="ngModel" required ngModel>
+        <label for="">Alter Ego</label>
+        <div class="error">
+          <span *ngIf="alterego.invalid && alterego.touched">Enter a alter ego</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <input type="text" name="power" #power="ngModel" required ngModel>
+        <label for="">Power</label>
+        <div class="error">
+          <span *ngIf="power.invalid && power.touched">Enter a power</span>
+        </div>
+      </div>
+      <div>
+        <input type="text" name="enemy" #enemy="ngModel" required ngModel maxlength="10">
+        <label for="">Enemy</label>
+        <div class="error">
+          <span *ngIf="enemy.errors?.['maxlength'] || enemy.invalid && enemy.touched">Enter up to 10 characters</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <input type="text" name="planet" #planet="ngModel" required ngModel minlength="5">
+        <label for="">Planet</label>
+        <div class="error">
+          <span *ngIf="planet.errors?.['minlength']">Enter at least 5 characters</span>
+        </div>
+      </div>
+      <div>
+        <input type="text" name="weekness" ngModel>
+        <label for="">Weekness</label>
+      </div>
+    </div>
+    <div id="btn">
+      <button [disabled]="f.invalid">Invia</button>
+    </div>
+  </form>
+</div>
+
+
+
+

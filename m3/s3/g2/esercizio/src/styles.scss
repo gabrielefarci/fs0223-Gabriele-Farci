@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-image: url(assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  font-family: 'Carter One', cursive;
+}
+
+// header
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 0 20px;
+}
+
+ul li:first-child {
+  border-right: 1px solid #000;
+  padding-left: 0;
+}
+
+ul li:last-child {
+  padding-right: 0;
+}
+
+ul a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul a:hover {
+  text-decoration: underline;
+}
+
+// form template driven
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.container form {
+  background-color: #fff;
+  opacity: .8;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 3px 1px #000;
+}
+
+.row {
+  display: flex;
+  height: 50px;
+}
+
+.row div {
+  margin: 0 20px;
+}
+
+.container form div, .container form div input {
+  padding: 10px 0;
+}
+
+.container form div input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #000;
+  color: #000;
+  outline: none;
+  font-size: 14px;
+}
+
+.container form div input::placeholder {
+  color: #000;
+  font-size: 14px;
+}
+
+.container form div {
+  position: relative;
+}
+
+.container form div label {
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0;
+  pointer-events: none;
+  transition: 0.6s ease;
+}
+
+.container form div input:focus~label,
+.container form div input:valid~label {
+  bottom: 20px;
+  font-size: 12px;
+}
+
+.error span {
+  font-size: 10px;
+  color: red;
+}
