@@ -1,1 +1,58 @@
-<p>reactive-form works!</p>
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <h1>Form</h1>
+    <div class="row">
+      <div>
+        <input type="text" formControlName="name">
+        <label for="">Name</label>
+        <div class="error">
+          <span *ngIf="nameErrors('name')">Enter a name</span>
+        </div>
+      </div>
+      <div>
+        <input type="text" formControlName="alterEgo">
+        <label for="">Alter Ego</label>
+        <div class="error">
+          <span *ngIf="alterEgoErrors('alterEgo')">Enter a alter ego</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="power">
+        <select formControlName="power">
+          <option value="">Select a power</option>
+          <option *ngFor="let power of powers">
+            {{power}}
+          </option>
+        </select>
+        <div class="error">
+          <span *ngIf="powerErrors('power')">Select a power</span>
+        </div>
+      </div>
+      <div>
+        <input type="text" formControlName="enemy">
+        <label for="">Enemy</label>
+        <div class="error">
+          <span *ngIf="enemyErrors('enemy')">Enter up to 10 characters</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <input type="text" formControlName="planet">
+        <label for="">Planet</label>
+        <div class="error">
+          <span *ngIf="planetErrors('planet')">Enter at least 5 characters</span>
+        </div>
+      </div>
+      <div>
+        <input type="text" formControlName="weekness">
+        <label for="">Weekness</label>
+      </div>
+    </div>
+    <div id="btn">
+      <button [disabled]="!form.valid">Invia</button>
+    </div>
+  </form>
+</div>
+

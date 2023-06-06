@@ -1,0 +1,8 @@
+.ng-invalid:not(.ng-untouched) {
+  border-color: red;
+}
+
+.error {
+  padding: 0;
+  margin-left: 0;
+}

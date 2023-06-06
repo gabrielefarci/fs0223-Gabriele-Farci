@@ -94,6 +94,17 @@ ul a:hover {
   position: relative;
 }
 
+#power {
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+#power select {
+  width: 150px;
+  outline: none;
+}
+
 .container form div label {
   letter-spacing: 2px;
   position: absolute;

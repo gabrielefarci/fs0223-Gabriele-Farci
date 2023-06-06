@@ -18,12 +18,13 @@
       </div>
     </div>
     <div class="row">
-      <div>
-        <input type="text" name="power" #power="ngModel" required ngModel>
-        <label for="">Power</label>
-        <div class="error">
-          <span *ngIf="power.invalid && power.touched">Enter a power</span>
-        </div>
+      <div id="power">
+        <select name="power" ngModel>
+          <option value="">Select a power</option>
+          <option value="strength">Strength</option>
+          <option value="">Speed</option>
+          <option value="">Mind control</option>
+        </select>
       </div>
       <div>
         <input type="text" name="enemy" #enemy="ngModel" required ngModel maxlength="10">
@@ -38,7 +39,7 @@
         <input type="text" name="planet" #planet="ngModel" required ngModel minlength="5">
         <label for="">Planet</label>
         <div class="error">
-          <span *ngIf="planet.errors?.['minlength']">Enter at least 5 characters</span>
+          <span *ngIf="planet.errors?.['minlength'] || planet.invalid && planet.touched">Enter at least 5 characters</span>
         </div>
       </div>
       <div>
@@ -51,7 +52,3 @@
     </div>
   </form>
 </div>
-
-
-
-
