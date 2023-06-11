@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container button {
+  background: none;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  border-bottom: 1px solid #00dfc4;
+}

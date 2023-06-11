@@ -1,0 +1,23 @@
+<app-auth></app-auth>
+<div class="container">
+  <form id="form-login" #f="ngForm">
+    <h3>Log In</h3>
+    <div id="mail-input">
+      <input type="email" id="email" name="email" required #email="ngModel" ngModel [(ngModel)]="data.email">
+      <label for="email">email</label>
+      <div class="error">
+        <span *ngIf="email.invalid && email.touched">enter an email</span>
+      </div>
+    </div>
+    <div id="pass-input">
+      <input type="password" id="password" name="password" required #password="ngModel" ngModel [(ngModel)]="data.password">
+      <label for="password">password</label>
+      <div class="error">
+        <span *ngIf="password.invalid && password.touched">enter a password</span>
+      </div>
+    </div>
+    <div id="btn-login">
+      <button (click)="login()">login</button>
+    </div>
+  </form>
+</div>

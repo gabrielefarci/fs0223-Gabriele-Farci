@@ -1,0 +1,92 @@
+#form-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 50px;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+
+#form-register h3 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#form-register input {
+  border: 1px solid rgba(255,255,255,0.25);
+  background-color: #1f2029;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  width: 200px;
+  font-size: 12px;
+}
+
+#name-input {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#surname-input {
+  position: relative;
+  margin-bottom: 10px 0;
+}
+
+#mail-input {
+  position: relative;
+  margin: 10px 0;
+}
+
+#pass-input {
+  position: relative;
+}
+
+#form-register label {
+  position: absolute;
+  color: rgba(255,255,255,0.25);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: all .5s;
+  pointer-events: none;
+}
+
+#form-register input:focus ~ label,
+#form-register input:valid ~ label {
+  left: 10px;
+  top: 0;
+  padding: 10px;
+  background-color: #1f2029;
+  padding: 0 5px;
+  color: #00dfc4;
+}
+
+#btn-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#btn-login button {
+  border: none;
+  background-color: #00dfc4;
+  color: #000;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#box-alert {
+  margin-top: 30px;
+  color: #00dfc4;
+}

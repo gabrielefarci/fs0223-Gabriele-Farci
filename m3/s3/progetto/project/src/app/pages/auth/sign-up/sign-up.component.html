@@ -1,0 +1,40 @@
+<div class="container">
+  <app-auth></app-auth>
+  <form id="form-register" #f="ngForm">
+    <h3>Sign Up</h3>
+    <div id="name-input">
+      <input type="text" id="name" name="name" required #name="ngModel" ngModel [(ngModel)]="data.name">
+      <label for="name">name</label>
+      <div class="error">
+        <span *ngIf="name.invalid && name.touched">enter a name</span>
+      </div>
+    </div>
+    <div id="surname-input">
+      <input type="text" id="surname" name="surname" required #surname="ngModel" ngModel [(ngModel)]="data.surname">
+      <label for="surname">surname</label>
+      <div class="error">
+        <span *ngIf="surname.invalid && surname.touched">enter a surname</span>
+      </div>
+    </div>
+    <div id="mail-input">
+      <input type="email" id="email" name="email" required #email="ngModel" ngModel [(ngModel)]="data.email">
+      <label for="email">email</label>
+      <div class="error">
+        <span *ngIf="email.invalid && email.touched">enter an email</span>
+      </div>
+    </div>
+    <div id="pass-input">
+      <input type="password" id="password" name="password" required #password="ngModel" ngModel [(ngModel)]="data.password">
+      <label for="password">password</label>
+      <div class="error">
+        <span *ngIf="password.invalid && password.touched">enter a password</span>
+      </div>
+    </div>
+    <div id="btn-login">
+      <button (click)="register(); alert()">register</button>
+    </div>
+    <div id="box-alert">
+
+    </div>
+  </form>
+</div>
